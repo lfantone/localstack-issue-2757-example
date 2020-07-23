@@ -1,0 +1,154 @@
+{
+  "version": "5.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "LocalStackDemoStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://0000000000/us-west-1",
+      "properties": {
+        "templateFile": "LocalStackDemoStack.template.json"
+      },
+      "metadata": {
+        "/LocalStackDemoStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.1fb93160970e8cc8b45b410fa189bb5c92a6f44514fd2efb7e3d1c7add94ce09",
+              "id": "1fb93160970e8cc8b45b410fa189bb5c92a6f44514fd2efb7e3d1c7add94ce09",
+              "packaging": "zip",
+              "sourceHash": "1fb93160970e8cc8b45b410fa189bb5c92a6f44514fd2efb7e3d1c7add94ce09",
+              "s3BucketParameter": "AssetParameters1fb93160970e8cc8b45b410fa189bb5c92a6f44514fd2efb7e3d1c7add94ce09S3BucketEE4ED9A8",
+              "s3KeyParameter": "AssetParameters1fb93160970e8cc8b45b410fa189bb5c92a6f44514fd2efb7e3d1c7add94ce09S3VersionKeyE160C88A",
+              "artifactHashParameter": "AssetParameters1fb93160970e8cc8b45b410fa189bb5c92a6f44514fd2efb7e3d1c7add94ce09ArtifactHash773578C4"
+            }
+          }
+        ],
+        "/LocalStackDemoStack/localstack-demo": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": "development-localstack-demo"
+          }
+        ],
+        "/LocalStackDemoStack/localstack-demo/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localstackdemo0E5A5AC4"
+          }
+        ],
+        "/LocalStackDemoStack/lambda-role-id/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdaroleidF47967A4"
+          }
+        ],
+        "/LocalStackDemoStack/lambda-role-id/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "lambdaroleidDefaultPolicyFA899F44"
+          }
+        ],
+        "/LocalStackDemoStack/create-user-handler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "createuserhandlerEA338D29"
+          }
+        ],
+        "/LocalStackDemoStack/AssetParameters/1fb93160970e8cc8b45b410fa189bb5c92a6f44514fd2efb7e3d1c7add94ce09/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters1fb93160970e8cc8b45b410fa189bb5c92a6f44514fd2efb7e3d1c7add94ce09S3BucketEE4ED9A8"
+          }
+        ],
+        "/LocalStackDemoStack/AssetParameters/1fb93160970e8cc8b45b410fa189bb5c92a6f44514fd2efb7e3d1c7add94ce09/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters1fb93160970e8cc8b45b410fa189bb5c92a6f44514fd2efb7e3d1c7add94ce09S3VersionKeyE160C88A"
+          }
+        ],
+        "/LocalStackDemoStack/AssetParameters/1fb93160970e8cc8b45b410fa189bb5c92a6f44514fd2efb7e3d1c7add94ce09/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters1fb93160970e8cc8b45b410fa189bb5c92a6f44514fd2efb7e3d1c7add94ce09ArtifactHash773578C4"
+          }
+        ],
+        "/LocalStackDemoStack/authenticate-user-handler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authenticateuserhandlerC042AFAF"
+          }
+        ],
+        "/LocalStackDemoStack/localstack-demo-users-api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localstackdemousersapi5BF8D1BC"
+          }
+        ],
+        "/LocalStackDemoStack/localstack-demo-users-api/CloudWatchRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localstackdemousersapiCloudWatchRole38F13E60"
+          }
+        ],
+        "/LocalStackDemoStack/localstack-demo-users-api/Account": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localstackdemousersapiAccountD53C0FE9"
+          }
+        ],
+        "/LocalStackDemoStack/localstack-demo-users-api/Default/users/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localstackdemousersapiusersE9799961"
+          }
+        ],
+        "/LocalStackDemoStack/localstack-demo-users-api/Default/users/auth/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localstackdemousersapiusersauthB7EAACD5"
+          }
+        ],
+        "/LocalStackDemoStack/localstack-demo-users-api/Default/users/auth/POST/ApiPermission.LocalStackDemoStacklocalstackdemousersapi0C72431E.POST..users.auth": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localstackdemousersapiusersauthPOSTApiPermissionLocalStackDemoStacklocalstackdemousersapi0C72431EPOSTusersauth611E09E0"
+          }
+        ],
+        "/LocalStackDemoStack/localstack-demo-users-api/Default/users/auth/POST/ApiPermission.Test.LocalStackDemoStacklocalstackdemousersapi0C72431E.POST..users.auth": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localstackdemousersapiusersauthPOSTApiPermissionTestLocalStackDemoStacklocalstackdemousersapi0C72431EPOSTusersauthBAC0FF23"
+          }
+        ],
+        "/LocalStackDemoStack/localstack-demo-users-api/Default/users/auth/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localstackdemousersapiusersauthPOSTC2C36F06"
+          }
+        ],
+        "/LocalStackDemoStack/localstack-demo-users-api/Default/users/POST/ApiPermission.LocalStackDemoStacklocalstackdemousersapi0C72431E.POST..users": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localstackdemousersapiusersPOSTApiPermissionLocalStackDemoStacklocalstackdemousersapi0C72431EPOSTusersF8DB1ED3"
+          }
+        ],
+        "/LocalStackDemoStack/localstack-demo-users-api/Default/users/POST/ApiPermission.Test.LocalStackDemoStacklocalstackdemousersapi0C72431E.POST..users": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localstackdemousersapiusersPOSTApiPermissionTestLocalStackDemoStacklocalstackdemousersapi0C72431EPOSTusersC9EB94EF"
+          }
+        ],
+        "/LocalStackDemoStack/localstack-demo-users-api/Default/users/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localstackdemousersapiusersPOSTE0CFCC64"
+          }
+        ]
+      }
+    }
+  }
+}

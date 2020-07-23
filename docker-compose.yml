@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  localstack:
+    image: localstack/localstack:latest
+    ports:
+      - '53:53'
+      - '443:443'
+      - '4510-4520:4510-4520'
+      - '4566-4620:4566-4620'
+      - '${PORT_WEB_UI-8080}:${PORT_WEB_UI-8080}'
+    environment:
+      - DATA_DIR=/tmp/localstack/confscheduler-data
+      - DEBUG=true
+      - DEFAULT_REGION=us-west-1
+      - DOCKER_HOST=unix://var/run/docker.sock
+      - LAMBDA_EXECUTOR=local
+      - LAMBDA_REMOTE_DOCKER=false
+      - PORT_WEB_UI=8080
+      - SERVICES=cloudformation,kms,cloudwatch,ssm,serverless
+    volumes:
+      - .localstack:/tmp/localstack
+      - /var/run/docker.sock

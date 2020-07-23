@@ -1,0 +1,7 @@
+{
+  "app": { "autoSynth": false, "outdir": "cdk.out/", "stackTraces": false, "runtimeInfo": false },
+  "stack": { "env": { "account": "0000000000", "region": "us-west-1" } },
+  "dynamodb": {},
+  "apigateway": {},
+  "stage": "development"
+}

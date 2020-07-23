@@ -1,0 +1,14 @@
+[
+  {
+    "ParameterKey": "AssetParameters1fb93160970e8cc8b45b410fa189bb5c92a6f44514fd2efb7e3d1c7add94ce09S3BucketEE4ED9A8",
+    "ParameterValue": "your-bucket-goes-here"
+  },
+  {
+    "ParameterKey": "AssetParameters1fb93160970e8cc8b45b410fa189bb5c92a6f44514fd2efb7e3d1c7add94ce09S3VersionKeyE160C88A",
+    "ParameterValue": "assets/||1fb93160970e8cc8b45b410fa189bb5c92a6f44514fd2efb7e3d1c7add94ce09.zip"
+  },
+  {
+    "ParameterKey": "AssetParameters1fb93160970e8cc8b45b410fa189bb5c92a6f44514fd2efb7e3d1c7add94ce09ArtifactHash773578C4",
+    "ParameterValue": "1fb93160970e8cc8b45b410fa189bb5c92a6f44514fd2efb7e3d1c7add94ce09"
+  }
+]
