@@ -66,7 +66,7 @@ class LocalStackDemoStack extends Stack {
       ...config.apigateway,
       handler: createUserLambdaHandler,
       // localstack doesn't support AWS::ApiGateway::Stage type
-      deploy: false,
+      // deploy: false,
       proxy: false
     });
 

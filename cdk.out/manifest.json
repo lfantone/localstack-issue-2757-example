@@ -100,6 +100,24 @@
             "data": "localstackdemousersapiAccountD53C0FE9"
           }
         ],
+        "/LocalStackDemoStack/localstack-demo-users-api/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localstackdemousersapiDeployment3D024C199dad28773b0c77d47af4cfccb672bbdd"
+          }
+        ],
+        "/LocalStackDemoStack/localstack-demo-users-api/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localstackdemousersapiDeploymentStageprod4C134016"
+          }
+        ],
+        "/LocalStackDemoStack/localstack-demo-users-api/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "localstackdemousersapiEndpoint7D48454D"
+          }
+        ],
         "/LocalStackDemoStack/localstack-demo-users-api/Default/users/Resource": [
           {
             "type": "aws:cdk:logicalId",

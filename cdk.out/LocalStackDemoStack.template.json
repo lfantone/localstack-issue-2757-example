@@ -309,6 +309,39 @@
         "aws:cdk:path": "LocalStackDemoStack/localstack-demo-users-api/Account"
       }
     },
+    "localstackdemousersapiDeployment3D024C199dad28773b0c77d47af4cfccb672bbdd": {
+      "Type": "AWS::ApiGateway::Deployment",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "localstackdemousersapi5BF8D1BC"
+        },
+        "Description": "Automatically created by the RestApi construct"
+      },
+      "DependsOn": [
+        "localstackdemousersapiusersauthPOSTC2C36F06",
+        "localstackdemousersapiusersauthB7EAACD5",
+        "localstackdemousersapiusersPOSTE0CFCC64",
+        "localstackdemousersapiusersE9799961"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "LocalStackDemoStack/localstack-demo-users-api/Deployment/Resource"
+      }
+    },
+    "localstackdemousersapiDeploymentStageprod4C134016": {
+      "Type": "AWS::ApiGateway::Stage",
+      "Properties": {
+        "RestApiId": {
+          "Ref": "localstackdemousersapi5BF8D1BC"
+        },
+        "DeploymentId": {
+          "Ref": "localstackdemousersapiDeployment3D024C199dad28773b0c77d47af4cfccb672bbdd"
+        },
+        "StageName": "prod"
+      },
+      "Metadata": {
+        "aws:cdk:path": "LocalStackDemoStack/localstack-demo-users-api/DeploymentStage.prod/Resource"
+      }
+    },
     "localstackdemousersapiusersE9799961": {
       "Type": "AWS::ApiGateway::Resource",
       "Properties": {
@@ -365,7 +398,11 @@
               {
                 "Ref": "localstackdemousersapi5BF8D1BC"
               },
-              "/*/POST/users/auth"
+              "/",
+              {
+                "Ref": "localstackdemousersapiDeploymentStageprod4C134016"
+              },
+              "/POST/users/auth"
             ]
           ]
         }
@@ -468,7 +505,11 @@
               {
                 "Ref": "localstackdemousersapi5BF8D1BC"
               },
-              "/*/POST/users"
+              "/",
+              {
+                "Ref": "localstackdemousersapiDeploymentStageprod4C134016"
+              },
+              "/POST/users"
             ]
           ]
         }
@@ -561,6 +602,30 @@
     "AssetParameters1fb93160970e8cc8b45b410fa189bb5c92a6f44514fd2efb7e3d1c7add94ce09ArtifactHash773578C4": {
       "Type": "String",
       "Description": "Artifact hash for asset \"1fb93160970e8cc8b45b410fa189bb5c92a6f44514fd2efb7e3d1c7add94ce09\""
+    }
+  },
+  "Outputs": {
+    "localstackdemousersapiEndpoint7D48454D": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "localstackdemousersapi5BF8D1BC"
+            },
+            ".execute-api.us-west-1.",
+            {
+              "Ref": "AWS::URLSuffix"
+            },
+            "/",
+            {
+              "Ref": "localstackdemousersapiDeploymentStageprod4C134016"
+            },
+            "/"
+          ]
+        ]
+      }
     }
   }
 }

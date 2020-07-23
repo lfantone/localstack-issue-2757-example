@@ -394,6 +394,51 @@
                   }
                 }
               },
+              "Deployment": {
+                "id": "Deployment",
+                "path": "LocalStackDemoStack/localstack-demo-users-api/Deployment",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "LocalStackDemoStack/localstack-demo-users-api/Deployment/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Deployment",
+                      "aws:cdk:cloudformation:props": {
+                        "restApiId": {
+                          "Ref": "localstackdemousersapi5BF8D1BC"
+                        },
+                        "description": "Automatically created by the RestApi construct"
+                      }
+                    }
+                  }
+                }
+              },
+              "DeploymentStage.prod": {
+                "id": "DeploymentStage.prod",
+                "path": "LocalStackDemoStack/localstack-demo-users-api/DeploymentStage.prod",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "LocalStackDemoStack/localstack-demo-users-api/DeploymentStage.prod/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Stage",
+                      "aws:cdk:cloudformation:props": {
+                        "restApiId": {
+                          "Ref": "localstackdemousersapi5BF8D1BC"
+                        },
+                        "deploymentId": {
+                          "Ref": "localstackdemousersapiDeployment3D024C199dad28773b0c77d47af4cfccb672bbdd"
+                        },
+                        "stageName": "prod"
+                      }
+                    }
+                  }
+                }
+              },
+              "Endpoint": {
+                "id": "Endpoint",
+                "path": "LocalStackDemoStack/localstack-demo-users-api/Endpoint"
+              },
               "Default": {
                 "id": "Default",
                 "path": "LocalStackDemoStack/localstack-demo-users-api/Default",
@@ -471,7 +516,11 @@
                                           {
                                             "Ref": "localstackdemousersapi5BF8D1BC"
                                           },
-                                          "/*/POST/users/auth"
+                                          "/",
+                                          {
+                                            "Ref": "localstackdemousersapiDeploymentStageprod4C134016"
+                                          },
+                                          "/POST/users/auth"
                                         ]
                                       ]
                                     }
@@ -585,7 +634,11 @@
                                       {
                                         "Ref": "localstackdemousersapi5BF8D1BC"
                                       },
-                                      "/*/POST/users"
+                                      "/",
+                                      {
+                                        "Ref": "localstackdemousersapiDeploymentStageprod4C134016"
+                                      },
+                                      "/POST/users"
                                     ]
                                   ]
                                 }
