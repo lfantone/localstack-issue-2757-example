@@ -20,7 +20,7 @@
   },
   "author": "Luciano Fantone <lucianoafantone@gmail.com>",
   "devDependencies": {
-    "aws-sdk": "^2.716.0",
+    "aws-sdk": "^2.814.0",
     "eslint": "^7.5.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-standard": "^14.1.1",
